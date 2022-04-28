@@ -1,1 +1,21 @@
-{{ content }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>
+      {% if page.title %}
+        {{ page.title }}
+      {% else %} 
+        {{ site.title }}
+      {% endif %}
+    </title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  </head>
+
+  <body>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
